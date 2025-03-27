@@ -22,12 +22,14 @@ app.use(cookieParser())
 //     methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE']
 // }
 
-const corOptions = {
-    origin: process.env.CLIENT_URL || ['http://localhost:3000'],
-    methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE']
-}
+// const corOptions = {
+//     origin: process.env.CLIENT_URL || ['http://localhost:3000'],
+//     methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE']
+// }
 
-app.use(cors(corOptions))
+// app.use(cors(corOptions))
+
+app.use(cors())
 
 // Routes
 app.use('/api/v1', authRoutes)
